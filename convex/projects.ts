@@ -42,6 +42,7 @@ export const get = query({
       .collect()
   },
 })
+
 export const getByID = query({
   args: { id: v.id("projects") },
   handler: async (ctx, args) => {
@@ -59,6 +60,7 @@ export const getByID = query({
     return project
   },
 })
+
 export const rename = mutation({
   args: { id: v.id("projects"), name: v.string() },
   handler: async (ctx, args) => {
