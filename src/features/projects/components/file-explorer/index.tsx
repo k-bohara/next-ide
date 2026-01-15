@@ -34,6 +34,7 @@ export const FileExplorer = ({ projectId }: { projectId: Id<"projects"> }) => {
 
   const createFile = useCreateFile()
   const createFolder = useCreateFolder()
+
   const handleCreate = (name: string) => {
     setCreating(null)
 

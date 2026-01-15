@@ -1,11 +1,6 @@
 import { useRouter } from "next/navigation"
 import { AlertCircleIcon, GlobeIcon, Loader2Icon } from "lucide-react"
-interface ProjectsCommandDialogProps {
-  open: boolean
-  onOpenChange: (open: boolean) => void
-}
 
-import React from "react"
 import { useProjects } from "../hooks/use-projects"
 import { FaGithub } from "react-icons/fa"
 import { cn } from "@/lib/utils"
@@ -18,6 +13,11 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command"
+
+interface ProjectsCommandDialogProps {
+  open: boolean
+  onOpenChange: (open: boolean) => void
+}
 
 const getProjectIcon = (project: Doc<"projects">) => {
   const iconClass = "size-4 text-muted-foreground"
